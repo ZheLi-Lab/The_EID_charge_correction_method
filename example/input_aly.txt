@@ -1,0 +1,13 @@
+###Input file format:
+[Basic_settings]
+simulation_software = openmm
+file_directory = "."
+file_prefix = 'state_ΔUs'
+file_suffix = '.csv'
+subsample = False
+fraction = 1.0
+output_csv_filename = 'free_ene.csv'
+energy_unit = 'kcal/mol'
+calculation_windows = all
+std_mode = bar_std
+plot_du = False
