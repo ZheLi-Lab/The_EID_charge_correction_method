@@ -19,6 +19,7 @@ Dependencies
 1. Step 1: Generated the Simulation Energy Output Files
 
 Collect the potential energy data from your alchemical simulations. These should be organized by λ windows and contain the electrostatic energy values for each frame.
+
 2. Step 2: Run the EID Analysis
 ```sh
 python EID_charge_correction_analysis.py
