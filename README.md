@@ -1,5 +1,5 @@
 # The_EID_charge_correction_method
-The Electrostatic Interaction Decoupling (EID) method is a novel charge correction approach for alchemical free energy calculations of charged ligand-protein systems. This repository provides the implementation of the EID method as described in our paper: "Electrostatic Interaction Decoupling (EID): An Efficient and Accurate Charge Correction Method for Alchemical Free Energy Calculations."
+The Electrostatic Interaction Decoupling (EID) method is a novel charge correction approach for alchemical free energy calculations of charged ligand-protein systems.
 ## Installation
 ```sh
 git clone https://github.com/ZheLi-Lab/The_EID_charge_correction_method.git
@@ -17,12 +17,14 @@ Dependencies
 
 ## Usage
 1. Step 1: Generated the Simulation Energy Output Files
+
 Collect the potential energy data from your alchemical simulations. These should be organized by λ windows and contain the electrostatic energy values for each frame.
 2. Step 2: Run the EID Analysis
 ```sh
 python EID_charge_correction_analysis.py
 ```
 This script performs multi-window joint fitting of the electrostatic energy data to extract the quadratic coefficients (a, b, c) for each frame, and then uses the linear coefficient (b) to recalculate corrected energy values.
+
 3. Step 3: Analyze the Corrected Free Energy Results
 ```sh
 python AlchemConvTools/one_end_fe_aly.py -i input_aly.txt
