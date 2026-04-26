@@ -11,7 +11,7 @@ import argparse
 import csv
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable
+from typing import Dict, Iterable, Union
 
 
 @dataclass(frozen=True)
@@ -50,7 +50,9 @@ def calculate_eid_additional_correction(
     return constants.prefactor * dielectric_factor * delta_q2 / box_length_nm
 
 
-def write_rows(output_path: Path, rows: Iterable[dict[str, float | str]]) -> None:
+def write_rows(
+    output_path: Path, rows: Iterable[Dict[str, Union[float, str]]]
+) -> None:
     """Write CSV rows summarizing the calculation."""
 
     with output_path.open("w", newline="") as handle:

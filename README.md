@@ -23,6 +23,7 @@ script for the additional EID correction term.
 ```sh
 git clone https://github.com/ZheLi-Lab/The_EID_charge_correction_method.git
 cd The_EID_charge_correction_method
+pip install numpy pandas scipy matplotlib pymbar alchemlyb pillow
 ```
 
 Dependencies for the fitting workflow:
@@ -33,12 +34,23 @@ Dependencies for the fitting workflow:
 - SciPy
 - Matplotlib
 - pymbar
+- alchemlyb
+- Pillow
+
+Optional dependencies:
+
+- OpenMM
+  Used to generate simulation energy output files, but not required for the
+  EID post-processing scripts in this repository.
+- PyMOL
+  Only needed for the optional visualization helper in
+  `AlchemConvTools/src/common_tools/drawgroup.py`.
 
 ## Usage
 
 ### 1. Prepare electrostatic energy data
 
-Collect the potential-energy data from the electrostatic decoupling windows.
+Collect the potential-energy data from the electrostatic annihilation windows.
 The example files in `example/` show the expected file layout.
 
 ### 2. Perform multi-window quadratic fitting and extract the linear term
