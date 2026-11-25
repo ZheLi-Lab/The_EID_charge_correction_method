@@ -1,7 +1,5 @@
 # Post-simulation analytical charge correction
 
-[中文说明](README.zh-CN.md) · [Implementation notes and validation limits](VALIDATION.md)
-
 This directory supplements the original repository with the supplied
 post-simulation analytical correction workflow. **It is separate from the EID
 fitting and `eid_additional_correction.py` workflows.** Do not automatically add
