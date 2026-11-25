@@ -1,0 +1,13 @@
+# Keep generated scientific runs local; do not upload them accidentally.
+__pycache__/
+*.py[cod]
+.venv/
+complex/
+ligand/
+*.pdb
+*.pqr
+*.dx
+*.out
+*.csv
+apbs_*.in
+!apbs_tmp.in
