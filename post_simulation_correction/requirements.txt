@@ -1,5 +1,0 @@
-# External executables (install separately): ambpdb and apbs.
-# pandas is included because the preserved detailed-export fallback is broken.
-numpy
-ParmEd
-pandas
